@@ -1,0 +1,38 @@
+{
+	"items": [
+		{
+			"id": 0,
+			"name": "Samosa",
+			"price": 5.00,
+			"img": "/img/Samosa.png"
+		},
+		{
+			"id": 1,
+			"name": "Jalebi",
+			"price": 10.00,
+			"img": "/img/Samosa.png"
+		},
+		{
+			"id": 2,
+			"name": "Pakoda",
+			"price": 0.25,
+			"img": "/img/Pakoda.png"
+		}
+	],
+	"users": [
+		{
+			"username": "admin",
+			"password": "456b7016a916a4b178dd72b947c152b7",
+			"cart": []
+		},
+		{
+			"username": "paramsiddharth",
+			"password": "d8e8fca2dc0f896fd7cb4cb0031ba249",
+			"cart": [
+				[0, 2],
+				[1, 4],
+				[2, 15]
+			]
+		}
+	]
+}
