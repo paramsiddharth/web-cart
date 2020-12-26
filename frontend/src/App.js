@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/nav';
 import Shop from './components/shop';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Redirect } from 'react-router-dom';
 import Login from './components/login';
 import Cart from './components/cart';
 import { useState } from 'react';
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename='/'>
         <NavBar user={loggedIn} setUser={logIn} logOut={logout} />
         <Route exact path='/'>
           <Redirect to='/login' />
