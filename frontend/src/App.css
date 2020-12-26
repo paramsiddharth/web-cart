@@ -1,0 +1,36 @@
+@keyframes pridecolours {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+#footerHeart {
+    background-image: repeating-linear-gradient(45deg, yellow, red, violet, indigo, blue, green, yellow, orange, red, violet, indigo, blue, green);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: pridecolours 2s linear infinite;
+    -webkit-text-stroke: 1px black;
+}
+
+.link-unstyled, .link-unstyled:visited, .link-unstyled:hover, .link-unstyled:active, .link-unstyled:focus, .link-unstyled:active:hover {
+    font-style: inherit;
+    color: inherit;
+    background-color: transparent;
+    font-size: inherit;
+    text-decoration: none;
+    font-variant: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    border-radius: inherit;
+    border: inherit;
+    outline: inherit;
+    box-shadow: inherit;
+    padding: inherit;
+    vertical-align: inherit;
+  }

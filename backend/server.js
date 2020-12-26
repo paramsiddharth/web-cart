@@ -1,11 +1,21 @@
 const jsonServer = require('json-server');
 const express = require('express');
-const server = jsonServer.create();
 const path = require('path');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.SERVER_PORT || 5000;
 
-server.use(jsonServer.defaults());
-server.use(jsonServer.bodyParser);
+const dbServer = jsonServer.create();
+const server = express();
+
 server.use('/static', express.static(path.join(__dirname, 'static')));
-server.use(jsonServer.router('db.json'));
+dbServer.use(jsonServer.defaults());
+dbServer.use(jsonServer.bodyParser);
+dbServer.use(jsonServer.router('db.json'));
+server.all('/', (req, res) => {
+	res.setHeader('Content-Type', 'text/plain');
+	res.send(`
+	/static/img : Images
+	/items : Shop items
+	`);
+});
+server.use('/', dbServer);
 server.listen(PORT, () => console.log(`Server running on port ${PORT}!`));
