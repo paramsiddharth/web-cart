@@ -1,5 +1,5 @@
 # Food Shop
-An working e-commerce website build using Express and React, styled using Material-UI and Bootstrap.
+A working e-commerce website build using Express and React, styled using Material-UI and Bootstrap.
 
 The application is live here: http://paramsiddharth.github.io/web-cart
 
